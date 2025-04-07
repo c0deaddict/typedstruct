@@ -328,7 +328,7 @@ defmodule TypedStruct do
         plugin.after_definition(plugin_opts)
       end
 
-    Enum.each(unquote(@attrs_to_delete), &Module.delete_attribute(module, &1))
+    # Enum.each(unquote(@attrs_to_delete), &Module.delete_attribute(module, &1))
 
     quote do
       unquote_splicing(fields_block)
